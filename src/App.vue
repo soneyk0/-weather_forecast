@@ -45,7 +45,7 @@ const searchQuery = ref('')
 function weatherSearch() {
   loading.value = true
   error.value = false
-  fetch(`http://api.weatherapi.com/v1/current.json?key=a1fec8e86b39450186d81443242211&q=${searchQuery.value}`)
+  fetch(`https://api.weatherapi.com/v1/current.json?key=a1fec8e86b39450186d81443242211&q=${searchQuery.value}`)
       .then(response => response.json())
       .then(data => {
         loading.value = false
